@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const router = require('./router');
 const init = require('./init');
 
-// create an express instance 
+// create an express instance
 const app = express();
 
 // hook any middleware you need to into the express instance, including your route handlers

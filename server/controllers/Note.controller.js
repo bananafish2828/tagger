@@ -82,7 +82,7 @@ const deleteNote = (req, res) => {
     .catch(err => {
       console.log('err = ', err);
       res.status(500).send(`error deleting note with id ${id}`);
-    })
+    });
 };
 
 module.exports = {

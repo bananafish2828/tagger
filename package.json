@@ -10,6 +10,7 @@
     "drop-db": "rm server/db/tagger.sqlite"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "react": "^15.5.4",
