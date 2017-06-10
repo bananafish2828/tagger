@@ -1,0 +1,38 @@
+.logo {
+  text-align: center;
+}
+
+button {
+  border-radius: 3px;
+  border: 0;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.red {
+  background-color: #c23133;
+  color: #fff;
+}
+.red:hover {
+  background-color: #e13f41;
+}
+.red:active {
+  background-color: #b42729;
+}
+
+.blue {
+  background-color: #25629f;
+  color: #fff;
+}
+.blue:hover {
+  background-color: #4a87c4;
+}
+.blue:active {
+  background-color: #1d3e5e;
+}
+
+.c-note-editor textarea {
+  width: 100%;
+  height: 250px;
+}

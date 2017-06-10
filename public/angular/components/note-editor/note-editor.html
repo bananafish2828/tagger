@@ -1,0 +1,21 @@
+<div class="c-note-editor">
+  <h1 class="note-editor-title">
+    {{ ctrl.isEditing() ? 'Edit Note' : 'Create New Note' }}
+  </h1>
+  <h2>Title:</h2>
+  <input type="text" ng-model="ctrl.title"></input>
+  <h2>Text:</h2>
+  <textarea ng-model="ctrl.text"></textarea>
+  <button
+    class="blue"
+    ng-click="ctrl.submitForm()">
+    {{ ctrl.isEditing() ? 'Edit Note' : 'Create Note' }}
+  </button>
+  <button
+    class="red"
+    ng-if="ctrl.isEditing()"
+    ng-click="ctrl.deleteNote()"
+  >
+    Delete Note
+  </button>
+</div>

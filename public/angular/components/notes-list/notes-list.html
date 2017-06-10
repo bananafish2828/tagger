@@ -1,0 +1,11 @@
+<div class="c-notes-list">
+  <div class="notes-list-title">
+    <h1>All Notes</h1>
+  </div>
+  <single-note
+    ng-repeat="note in ctrl.notes"
+    note="note"
+    set-current-note="ctrl.setCurrentNote"
+  >
+  </single-note>
+</div>

@@ -1,0 +1,20 @@
+<div class="c-single-note">
+  <h3 class="single-note-title">
+    {{ ctrl.note.title }}
+  </h3>
+  <p class="single-note-text">
+    {{ ctrl.note.text }}
+  </p>
+  <button 
+    class="blue"
+    ng-click="ctrl.setCurrentNote(ctrl.note)"
+  >
+    Edit
+  </button>
+  <button 
+    class="red"
+    ng-click="ctrl.deleteNote(ctrl.note)"
+  >
+    Delete
+  </button>
+</div>

@@ -7,30 +7,28 @@
   <title>Tagger</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- angular stylesheet -->
+  <link rel="stylesheet" href="css/angular-style.css">
+
+  <!-- react stylesheet -->
+  <!--<link rel="stylesheet" href="css/react-style.css">-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
 </head>
 <body>
+  <!-- React Solution -->
+  <!-- <script src="react/bundle.js"></script> -->
+  <!-- <div id="app"></div> -->
 
-  <!-- your html here -->
-  <div id="app"></div>
-
-  <!-- 
-    Utilize one of these <script> options, depending on the front-end framework
-    of your choice:
-
-    view the README for an explanation of this setup.
-
-    React:
-    <script src="react/bundle.js"></script>
-
-    Angular:
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-    <script src="angular/app.js"></script>
-    Be sure to include more script tags for other files you create.
-
-    (Because there is no module loader like webpack being used for the Angular setup,
-    you'll need to script source all files you want index.html to load)
-  -->
-  <script src="react/bundle.js"></script>
+  <!-- Angular Solution -->
+  <div ng-app="app">
+    <tagger></tagger>
+  </div>
+  <script src="angular/app.js"></script>
+  <script src="angular/services/notes.service.js"></script>
+  <script src="angular/components/tagger/tagger.js"></script>
+  <script src="angular/components/notes-list/notes-list.js"></script>
+  <script src="angular/components/single-note/single-note.js"></script>
+  <script src="angular/components/note-editor/note-editor.js"></script>
 </body>
 </html>
