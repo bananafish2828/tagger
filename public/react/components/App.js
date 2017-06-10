@@ -60,7 +60,7 @@ class App extends Component {
           this.refreshNotes();
         });
     } else {
-      addNote(body)
+      addNote({ title, text })
         .then(() => {
           this.setState({
             loading: false,

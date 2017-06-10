@@ -52,7 +52,13 @@ class NoteEditor extends Component {
     return (
       <div className="row note-editor">
         <div className="col-xs-12">
-          <h3>{title}</h3>
+          <h3>Title</h3>
+          <input
+            value={title}
+            type="text"
+            name="title"
+            onChange={this.handleChange}/>
+          <h3>Text</h3>
           <textarea
             value={text}
             name="text"
