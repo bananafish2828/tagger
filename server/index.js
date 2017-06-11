@@ -1,13 +1,19 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const morgan = require('morgan');
 // bring in any express middleware functions and other libraries you need
 
 // this will force the db/index.js module to run, establishing a database connection.
 // you may or may not need to use the database connection in this index.js file.
 // if you need to use it, assign the return value of require('./db') to a variable.
-require('./db');
+const db = require('./db');
+
+const app = express();
+
+app.use(bodyParser.json())
+  .use(bodyParser.urlencoded({ extended: true }))
+  .use(morgan('dev'));
 
 // create an express instance 
 
@@ -19,3 +25,12 @@ require('./db');
 
 // listen on this port:
 const port = 5050;
+app.listen(port, function(err) {
+  if (err) {
+    console.log('error connecting to port: ', port)
+  } else {
+    console.log('server listening on port: ', port)
+  }
+});
+
+module.exports = app
