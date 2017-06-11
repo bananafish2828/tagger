@@ -29,9 +29,17 @@ const changeNote = (req, res) => {
     });
 }
 
+const deleteNote = (req, res) => {
+  db.knex('notes').where('id', req.body.id).del()
+    .then(function (data) {
+      console.log('note deleted'); 
+    });
+}
+
 module.exports = {
   getNotes: getNotes,
   getNote: getNote,
   createNote: createNote,
-  changeNote: changeNote
+  changeNote: changeNote,
+  deleteNote: deleteNote
 }
