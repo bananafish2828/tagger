@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 // (you will want to use the path library to correctly resolve the path to ../public.)
 
 // listen on this port:
-const port = 5050;
+const port = 5051;
 app.listen(port, function(err) {
   if (err) {
     console.log('error connecting to port: ', port)
