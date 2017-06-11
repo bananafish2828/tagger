@@ -5,35 +5,37 @@ const db = require('bookshelf')(knex);
 
 const getNotes = (req, res) => {
   db.knex('notes').select('*')
-    .then(function (data) {
+    .then(function(data) {
       console.log('notes retrieved ', data);
-    })
-  }
+  });
+}
 
 const getNote = (req, res) => {
-
+  db.knex('notes').select('title', 'notepad').where('id', req.body.id)
+    .then(function(data) {
+      console.log('note retreived ', data);
+  });
 }
 
 const createNote = (req, res) => {
   db.knex.insert({ id: null, title: req.body.title, notepad: req.body.notepad}).into('notes')
     .then(function(data) {
       console.log('note created');
-    });
-
+  });
 }
 
 const changeNote = (req, res) => {
   db.knex('notes').where('id', req.body.id).update({ title: req.body.title, notepad: req.body.notepad })
     .then(function(data) {
       console.log('note updated');
-    });
+  });
 }
 
 const deleteNote = (req, res) => {
   db.knex('notes').where('id', req.body.id).del()
     .then(function (data) {
       console.log('note deleted'); 
-    });
+  });
 }
 
 module.exports = {
