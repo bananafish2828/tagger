@@ -2,7 +2,7 @@
 // you'll need to refer to the docs for the exact set up.
 // checkout the README for some tips for how to clear out your database.
 const mysql = require('mysql');
-const dbConfig = require('./.dbConfig.js')
+const dbConfig = require('./.dbconfig.js')
 const knex = require('knex')(dbConfig);
 
 const db = require('bookshelf')(knex);

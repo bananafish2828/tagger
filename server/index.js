@@ -8,6 +8,7 @@ const morgan = require('morgan');
 // you may or may not need to use the database connection in this index.js file.
 // if you need to use it, assign the return value of require('./db') to a variable.
 const db = require('./db');
+const router = require('./router');
 
 const app = express();
 
@@ -24,6 +25,8 @@ app.use(bodyParser.json())
 // (you will want to use the path library to correctly resolve the path to ../public.)
 
 // listen on this port:
+app.use('/', router);
+
 const port = 5051;
 app.listen(port, function(err) {
   if (err) {
