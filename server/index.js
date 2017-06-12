@@ -26,6 +26,7 @@ app.use(bodyParser.json())
 
 // listen on this port:
 app.use('/', router);
+app.use(express.static(path.join(__dirname, '../public')));
 
 const port = 5051;
 app.listen(port, function(err) {
